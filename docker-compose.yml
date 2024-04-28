@@ -292,7 +292,7 @@ services:
       - GIT_SYNC_MAX_FAILURES=0
       - GIT_KNOWN_HOSTS=false
       - GIT_SYNC_DEST=repo
-      - GIT_SYNC_REPO=https://cloudopz.co/devops/airflow-dags.git
+      - GIT_SYNC_REPO=https://github.com/Ale-Litz/Airflow_custom.git
       - GIT_SYNC_WAIT=60
       - GIT_SYNC_TIMEOUT=120
       - GIT_SYNC_ADD_USER=true
