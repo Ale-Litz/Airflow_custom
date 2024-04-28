@@ -221,7 +221,7 @@ services:
     environment:
       - GIT_SYNC_REV=HEAD
       - GIT_SYNC_DEPTH=1
-      - GIT_SYNC_USERNAME=airflow
+      - GIT_SYNC_USERNAME=root
       - GIT_SYNC_MAX_FAILURES=3
       - GIT_KNOWN_HOSTS=false
       - GIT_SYNC_DEST=repo
