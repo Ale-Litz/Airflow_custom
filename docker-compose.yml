@@ -298,7 +298,7 @@ services:
       - GIT_SYNC_ADD_USER=true
       - GIT_SYNC_PASSWORD=
       - GIT_SYNC_ROOT=/dags
-      - GIT_SYNC_BRANCH=master
+      - GIT_SYNC_BRANCH=main
     volumes:
       - /mnt/airflow/dags:/dags
 
