@@ -221,15 +221,15 @@ services:
     environment:
       - GIT_SYNC_REV=HEAD
       - GIT_SYNC_DEPTH=1
-      - GIT_SYNC_USERNAME=airflow
+      # - GIT_SYNC_USERNAME=
       - GIT_SYNC_MAX_FAILURES=0
       - GIT_KNOWN_HOSTS=false
       - GIT_SYNC_DEST=repo
       - GIT_SYNC_REPO=https://github.com/Ale-Litz/Airflow_custom.git
       - GIT_SYNC_WAIT=60
       - GIT_SYNC_TIMEOUT=120
-      - GIT_SYNC_ADD_USER=true
-      - GIT_SYNC_PASSWORD=
+      # - GIT_SYNC_ADD_USER=true
+      # - GIT_SYNC_PASSWORD=
       - GIT_SYNC_ROOT=/dags
       - GIT_SYNC_BRANCH=main
     volumes:
