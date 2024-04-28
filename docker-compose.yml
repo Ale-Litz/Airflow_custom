@@ -216,24 +216,19 @@ services:
       airflow-init:
         condition: service_completed_successfully
 
-  gitsync:
-    image: k8s.gcr.io/git-sync/git-sync:v3.2.2
+  git-sync:
+    image: openweb/git-sync:0.0.1
     environment:
-      - GIT_SYNC_REV=HEAD
-      - GIT_SYNC_DEPTH=1
-      - GIT_SYNC_USERNAME=root
-      - GIT_SYNC_MAX_FAILURES=3
-      - GIT_KNOWN_HOSTS=false
-      - GIT_SYNC_DEST=repo
-      - GIT_SYNC_REPO=https://github.com/Ale-Litz/Airflow_custom.git
-      - GIT_SYNC_WAIT=60
-      - GIT_SYNC_TIMEOUT=120
-      - GIT_SYNC_ADD_USER=true
-      - GIT_SYNC_PASSWORD=
-      - GIT_SYNC_ROOT=/dags
-      - GIT_SYNC_BRANCH=main
+      GIT_SYNC_REPO: "https://github.com/Ale-Litz/Airflow_custom.git"
+      GIT_SYNC_DEST: "/dags"
+      GIT_SYNC_BRANCH: "main"
+      GIT_SYNC_REV: "FETCH_HEAD"
+      GIT_SYNC_WAIT: "10"
     volumes:
-      - /mnt/airflow/dags:/dags
+      - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
+    restart: always
 
 volumes:
   postgres-db-volume:
+  website_sources:
+    driver: local
