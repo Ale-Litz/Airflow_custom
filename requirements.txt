@@ -1,0 +1,6 @@
+markupsafe==2.0.1
+apache-airflow-providers-odbc
+apache-airflow-providers-microsoft-mssql
+apache-airflow-providers-microsoft-mssql[obdc]
+apache-airflow-providers-microsoft-azure
+pyodbc
